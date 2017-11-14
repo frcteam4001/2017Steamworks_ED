@@ -51,6 +51,7 @@ public class Robot extends IterativeRobot {
 		System.out.println("Robot.robotInit(): robotInit() called");
 		SmartDashboard.putData("Curtain Up", new CurtainUp());
 		SmartDashboard.putData("Curtain Down", new CurtainDown());
+		SmartDashboard.putData("Pusher", new PusherCommand());
 	}
 
 	/**
@@ -61,6 +62,7 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void disabledInit() {
 
+		
 	}
 
 	@Override

@@ -7,6 +7,7 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 import org.usfirst.frc.team4001.robot.commands.Climb;
 import org.usfirst.frc.team4001.robot.commands.ExampleCommand;
+import org.usfirst.frc.team4001.robot.commands.PusherCommand;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -23,11 +24,14 @@ public class OI {
 	
 	public Joystick gamepad1;
 	Button climbButton;
+	Button pusherTrigger;
 	
 	public OI(){
 		gamepad1 = new Joystick(0);
 		climbButton = new JoystickButton(gamepad1, 4);
+		pusherTrigger = new JoystickButton(gamepad1, 6);
 		climbButton.whileHeld(new Climb());
+		pusherTrigger.whileHeld(new PusherCommand());
 	}
 	public double getLeftAxis()
 	{

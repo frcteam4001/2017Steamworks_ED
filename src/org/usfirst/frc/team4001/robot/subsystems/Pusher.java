@@ -27,8 +27,8 @@ public class Pusher extends Subsystem {
     }
     
     public void pusherOut(){
-    	soleIn.set(true);
-    	soleOut.set(false);
+    	soleIn.set(false);
+    	soleOut.set(true);
     }
     
     public boolean pusherState(){
